@@ -1,0 +1,160 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff4e3;
+  color: #816068;
+  display: flex;
+  flex-direction: column;
+  font-family: omnes-pro, Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.no-shrink {
+  flex-shrink: 0;
+}
+
+.background {
+  z-index: -1;
+  pointer-events: none;
+}
+
+.top-wave-container,
+.bottom-wave-container {
+  height: 136px;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-wave {
+  height: 1238px;
+  left: -500px;
+  position: absolute;
+  top: -625px;
+  width: 1200px;
+}
+
+.bottom-wave {
+  bottom: -600px;
+  height: 1238px;
+  position: absolute;
+  right: -1400px;
+  width: 2116px;
+}
+
+main {
+  margin: 0 auto -48px;
+  max-width: 64rem;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin: 0 0 40px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 0 0 40px;
+}
+
+span {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #eac9d3;
+  cursor: pointer;
+}
+
+span:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -1 20 6'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23EA2161' stroke-width='3px' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 1.625rem;
+  background-repeat: repeat-x;
+  background-size: auto 5px;
+  color: #ea2161;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #816068;
+  margin: 0;
+}
+
+nav a {
+  color: #816068;
+  display: inline-block;
+  font-size: 1.125rem;
+  line-height: 3.75rem;
+  margin: 20px 20px 10px 0;
+  text-decoration-color: rgba(129, 96, 104, 0.3);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+nav a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -1 20 6'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='rgba%28129%2C%2096%2C%20104%2C%200.3%29' stroke-width='3px' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 2.5rem;
+  background-repeat: repeat-x;
+  background-size: auto 6px;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .top-wave-container {
+    height: 310px;
+  }
+
+  .bottom-wave-container {
+    height: 300px;
+  }
+
+  .top-wave {
+    left: -400px;
+    top: -625px;
+  }
+
+  .bottom-wave {
+    bottom: -650px;
+    right: -1000px;
+  }
+
+  main {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .top-wave-container {
+    height: 440px;
+    margin-bottom: -200px;
+  }
+
+  .bottom-wave-container {
+    height: 350px;
+  }
+
+  .top-wave {
+    left: -390px;
+    top: -500px;
+  }
+
+  .bottom-wave {
+    bottom: -650px;
+    right: -900px;
+  }
+
+  .content {
+    display: flex;
+    gap: 36px;
+  }
+
+  .content > p {
+    flex: 1;
+  }
+}
