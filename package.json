@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "description": "Personal website for Gabe Benjamin",
   "main": "index.html",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GabeBenjamin/gabebenjamin.github.io.git"
@@ -13,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/GabeBenjamin/gabebenjamin.github.io/issues"
   },
-  "homepage": "https://github.com/GabeBenjamin/gabebenjamin.github.io#readme"
+  "homepage": "https://github.com/GabeBenjamin/gabebenjamin.github.io#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.7",
+    "jest": "^27.4.7"
+  }
 }
