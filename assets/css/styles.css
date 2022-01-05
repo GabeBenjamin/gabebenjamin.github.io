@@ -6,11 +6,11 @@ body {
 body {
   background-color: #fff4e3;
   color: #816068;
+  font-family: omnes-pro, Arial, Helvetica, sans-serif;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: omnes-pro, Arial, Helvetica, sans-serif;
   justify-content: space-between;
-  margin: 0;
 }
 
 .no-shrink {
@@ -70,6 +70,10 @@ span {
   -webkit-text-decoration-color: #eac9d3;
   text-decoration-color: #eac9d3;
   text-decoration-thickness: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 span:hover {
