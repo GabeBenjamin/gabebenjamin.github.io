@@ -18,8 +18,8 @@ body {
 }
 
 .background {
-  z-index: -1;
   pointer-events: none;
+  z-index: -1;
 }
 
 .top-wave-container,
@@ -65,10 +65,11 @@ p {
 }
 
 span {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #eac9d3;
   cursor: pointer;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #eac9d3;
+  text-decoration-color: #eac9d3;
+  text-decoration-thickness: 3px;
 }
 
 span:hover {
@@ -92,6 +93,7 @@ nav a {
   font-size: 1.125rem;
   line-height: 3.75rem;
   margin: 20px 20px 10px 0;
+  -webkit-text-decoration-color: rgba(129, 96, 104, 0.3);
   text-decoration-color: rgba(129, 96, 104, 0.3);
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
