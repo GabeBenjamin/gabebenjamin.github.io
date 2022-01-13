@@ -124,6 +124,22 @@ nav a:focus-visible {
   outline: 2px solid #816068;
 }
 
+#vibe-zone {
+  position: fixed;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+
+.vibe {
+  bottom: 0;
+  position: absolute;
+  width: 100px;
+}
+
 @media (min-width: 768px) {
   .top-wave-container {
     height: 310px;
@@ -145,6 +161,10 @@ nav a:focus-visible {
 
   main {
     padding: 0 32px;
+  }
+
+  .vibe {
+    width: 125px;
   }
 }
 
@@ -175,5 +195,9 @@ nav a:focus-visible {
 
   .content > p {
     flex: 1;
+  }
+
+  .vibe {
+    width: 150px;
   }
 }
