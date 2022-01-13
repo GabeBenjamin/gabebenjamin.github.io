@@ -1,48 +1,49 @@
 /**
  * @jest-environment jsdom
  */
-import addSpanEventHandlers from "../span-button";
+import SpanButton from "../span-button";
 
 describe("addSpanEventHandlers", () => {
+  beforeAll(() => {
+    customElements.define("span-button", SpanButton, { extends: "span" });
+  });
+
   beforeEach(() => {
     document.body.innerHTML = `
     <div>
-      <span id="span" role="button">span button<span>
+      <span is="span-button" id="span">span button<span>
     </div>
     `;
   });
 
-  test("makes span button click on enter key", () => {
+  test("enter keypress triggers span-button onClick handler", () => {
     const stub = jest.fn();
-    const spanEl = document.getElementById("span");
+    const spanEl = document.querySelector('span[is="span-button"]');
     spanEl.onclick = stub;
-    const enterKeyEvent = new KeyboardEvent("keydown", { key: "Enter" });
 
-    addSpanEventHandlers();
+    const enterKeyEvent = new KeyboardEvent("keydown", { key: "Enter" });
     spanEl.dispatchEvent(enterKeyEvent);
 
     expect(stub).toBeCalled();
   });
 
-  test("makes span button click on spacebar key", () => {
+  test("spacebar keypress triggers span-button onClick handler", () => {
     const stub = jest.fn();
     const spanEl = document.getElementById("span");
     spanEl.onclick = stub;
-    const spaceBarKeyEvent = new KeyboardEvent("keydown", { key: "Spacebar" });
 
-    addSpanEventHandlers();
+    const spaceBarKeyEvent = new KeyboardEvent("keydown", { key: "Spacebar" });
     spanEl.dispatchEvent(spaceBarKeyEvent);
 
     expect(stub).toBeCalled();
   });
 
-  test("makes span button click on space key", () => {
+  test("space key triggers span-button onClick handler", () => {
     const stub = jest.fn();
     const spanEl = document.getElementById("span");
     spanEl.onclick = stub;
-    const spaceKeyEvent = new KeyboardEvent("keydown", { key: " " });
 
-    addSpanEventHandlers();
+    const spaceKeyEvent = new KeyboardEvent("keydown", { key: " " });
     spanEl.dispatchEvent(spaceKeyEvent);
 
     expect(stub).toBeCalled();

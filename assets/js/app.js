@@ -1,4 +1,4 @@
-import addSpanEventHandlers from "./span-button.js";
+import SpanButton from "./span-button.js";
 
-// Set up spans
-addSpanEventHandlers();
+// Add custom span-button element
+customElements.define("span-button", SpanButton, { extends: "span" });

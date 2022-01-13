@@ -6,11 +6,11 @@ body {
 body {
   background-color: #fff4e3;
   color: #816068;
-  font-family: omnes-pro, Arial, Helvetica, sans-serif;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: omnes-pro, Arial, Helvetica, sans-serif;
   justify-content: space-between;
+  margin: 0;
 }
 
 .no-shrink {
@@ -64,25 +64,32 @@ p {
   margin: 0 0 40px;
 }
 
-span {
+.vibe-button {
   cursor: pointer;
+  padding: 2px;
   text-decoration: underline;
   -webkit-text-decoration-color: #eac9d3;
   text-decoration-color: #eac9d3;
   text-decoration-thickness: 3px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-span:hover {
+.vibe-button:focus-visible,
+.vibe-button:hover {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -1 20 6'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23EA2161' stroke-width='3px' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 1.625rem;
+  background-position: 0 1.75rem;
   background-repeat: repeat-x;
   background-size: auto 5px;
   color: #ea2161;
   text-decoration: none;
+}
+
+.vibe-button:focus-visible {
+  border-radius: 8px;
+  outline: 2px solid #ea2161;
 }
 
 hr {
@@ -103,12 +110,18 @@ nav a {
   text-underline-offset: 4px;
 }
 
+nav a:focus-visible,
 nav a:hover {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 -1 20 6'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='rgba%28129%2C%2096%2C%20104%2C%200.3%29' stroke-width='3px' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
   background-position: 0 2.5rem;
   background-repeat: repeat-x;
   background-size: auto 6px;
   text-decoration: none;
+}
+
+nav a:focus-visible {
+  border-radius: 10px;
+  outline: 2px solid #816068;
 }
 
 @media (min-width: 768px) {
