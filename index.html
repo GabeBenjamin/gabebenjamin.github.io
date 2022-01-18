@@ -23,15 +23,16 @@
         Ideally these spans would be buttons to get all the functionality for free, but buttons
         cannot be true inline elements and therefore cannot wrap like normal text. So instead we
         use spans and have manually added in the functionality to make it accessible. -->
-      <!-- TODO, follow this guide: https://benfrain.com/converting-divs-into-accessible-pseudo-buttons/ -->
       <p>
-        I’m a Senior Software Engineer who enjoys <span>fostering inclusive teams</span>,
-        <span>building robust codebases</span>, and <span>tackling hard technical challenges</span>.
+        I’m a Senior Software Engineer who enjoys <span is="span-button" class="vibe-button"> fostering inclusive
+          teams</span>, <span is="span-button" class="vibe-button">building robust codebases</span>, and <span
+          is="span-button" class="vibe-button">tackling hard technical challenges</span>.
       </p>
       <p>
-        Outside of work (but sometimes at work as well 🙂) I like to <span>cook</span>, <span>bake</span>,
-        <span>play video games with friends</span>, and <span>vibe with my cat
-          Smokey</span>.
+        Outside of work (but sometimes at work as well 🙂) I like to <span is="span-button"
+          class="vibe-button">cook</span>, <span is="span-button" class="vibe-button">bake</span>, <span
+          is="span-button" class="vibe-button">play video games with friends</span>, and <span is="span-button"
+          class="vibe-button">vibe with my cat Smokey</span>.
       </p>
     </div>
     <hr>
@@ -45,6 +46,7 @@
   <div class="background bottom-wave-container no-shrink">
     <img class="bottom-wave" role="presentation" src="assets/svg/bottom-wave.svg" />
   </div>
+  <script type="module" src="assets/js/app.js"></script>
 </body>
 
 </html>
