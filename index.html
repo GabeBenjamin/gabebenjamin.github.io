@@ -1,52 +1,59 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Gabe Benjamin - Software Engineer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="assets/css/images/favicon.ico">
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Gabe Benjamin</h1>
-						<p>Software Engineer @ <a href="https://www.google.com/">Google</a></p>
-						<nav>
-							<ul>
-								<li><a href="Gabe_Benjamin_Resume.pdf" class="icon fa-file-text"><span class="label">Resume</span></a></li>
-								<li><a href="https://www.linkedin.com/in/gabebenjamin" class="icon fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/GabeBenjamin" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="mailto:GabeKEBenjamin@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+<head>
+  <title>Gabe Benjamin - Senior Software Engineer</title>
+  <meta name="description"
+    content="Gabe Benjamin is a full stack Senior Software Engineer with over 5 years of experience who currently works at Google" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="stylesheet" href="https://use.typekit.net/oyr7lzg.css">
+</head>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Gabe Benjamin. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
+<body>
+  <div class="background top-wave-container no-shrink">
+    <img class="top-wave" role="presentation" src="assets/svg/top-wave.svg" />
+  </div>
+  <main class="no-shrink">
+    <h1>👋 I'm Gabe</h1>
+    <div class="content">
+      <!-- 
+        Ideally these spans would be buttons to get all the functionality for free, but buttons
+        cannot be true inline elements and therefore cannot wrap like normal text. So instead we
+        use spans and have manually added in the functionality to make it accessible. -->
+      <p>
+        I’m a Senior Software Engineer who enjoys <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/power-rangers.gif"> fostering inclusive teams</span>, <span is="span-button"
+          class="vibe-button" data-vibe-src="/assets/vibes/typing-cat.gif">building robust codebases</span>, and <span
+          is="span-button" class="vibe-button" data-vibe-src="/assets/vibes/thinking-spiderman.gif">tackling hard
+          technical challenges</span>.
+      </p>
+      <p>
+        Outside of work (but sometimes at work as well 🙂) I like to <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/salt-bae.gif">cook</span>, <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/baking-pusheen.gif">bake</span>, <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/dancing-mario-bros.gif">play video games with friends</span>, and <span
+          is="span-button" class="vibe-button" data-vibe-src="/assets/vibes/vibing-cat.gif">vibe with my cat
+          Smokey</span>.
+      </p>
+    </div>
+    <hr>
+    <nav>
+      <a href="/Gabe_Benjamin_Resume.pdf">Resume</a>
+      <a href="https://www.linkedin.com/in/gabebenjamin">LinkedIn</a>
+      <a href="https://github.com/GabeBenjamin">Github</a>
+      <a href="mailto:GabeKEBenjamin@gmail.com">Email</a>
+    </nav>
+  </main>
+  <div class="background bottom-wave-container no-shrink">
+    <img class="bottom-wave" role="presentation" src="assets/svg/bottom-wave.svg" />
+  </div>
+  <div id="vibe-zone"></div>
+  <div id="vibe-count"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
 
-			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
 </html>
