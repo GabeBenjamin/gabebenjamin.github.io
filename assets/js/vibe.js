@@ -1,13 +1,3 @@
-const vibeMap = {
-  team: "/assets/vibes/power-rangers.gif",
-  codebase: "/assets/vibes/typing-cat.gif",
-  challenges: "/assets/vibes/thinking-spiderman.gif",
-  cook: "/assets/vibes/salt-bae.gif",
-  bake: "/assets/vibes/baking-pusheen.gif",
-  "video-games": "/assets/vibes/dancing-mario-bros.gif",
-  cat: "/assets/vibes/vibing-cat.gif",
-};
-
 const pxPerSecond = 200;
 const minimumTime = 2;
 
@@ -28,15 +18,19 @@ function animateVibe(vibeEl) {
   const timeline = window.gsap.timeline();
 
   // Animate the vibe to randomly get thrown up and fall down
-  timeline.to(vibeEl, {
-    y: -1 * randY,
-    opacity: 1,
-    rotation: randRotate / 2,
-    duration: vibeSeconds / 2,
-    ease: "power1.out",
-    scale: 1.5,
-    startAt: { x: randX, y: 0, opacity: 0, scale: 1 },
-  });
+  timeline.fromTo(
+    vibeEl,
+    { x: randX, y: 0, opacity: 0, scale: 1 },
+    {
+      y: -1 * randY,
+      opacity: 1,
+      rotation: randRotate / 2,
+      duration: vibeSeconds / 2,
+      ease: "power1.out",
+      scale: 1.5,
+      immediateRender: true,
+    }
+  );
   timeline.to(vibeEl, {
     y: 0,
     opacity: 0,
@@ -56,7 +50,7 @@ function animateVibe(vibeEl) {
  * @param {Element} target
  */
 function vibeClicked(target) {
-  const vibeSrc = vibeMap[target.id];
+  const vibeSrc = target.dataset.vibeSrc;
 
   if (!vibeSrc) {
     return;
@@ -76,20 +70,6 @@ function vibeClicked(target) {
   // Animate the vibe
   animateVibe(gifEl);
 }
-
-/**
- * Preload the images on startup so things are ready whenever the user clicks on a vibe
- */
-const images = new Array();
-function preloadVibeImages() {
-  let i = 0;
-  Object.values(vibeMap).forEach((vibeSrc) => {
-    const tempImage = new Image();
-    tempImage.src = vibeSrc;
-    images.push(tempImage);
-  });
-}
-preloadVibeImages();
 
 /**
  * Adds vibe functionality on click to the passed in elements

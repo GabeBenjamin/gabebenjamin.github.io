@@ -6,11 +6,13 @@ import addVibeListeners from "../vibe.js";
 
 describe("When vibeListener is called it", () => {
   beforeEach(() => {
-    window.gsap = { timeline: () => ({ to: jest.fn(), call: jest.fn() }) };
+    window.gsap = {
+      timeline: () => ({ fromTo: jest.fn(), to: jest.fn(), call: jest.fn() }),
+    };
 
     document.body.innerHTML = `
      <div>
-       <span is="span-button" id="cat" class="vibe-button">vibe button</span>
+       <span is="span-button" data-vibe-src="/cat.gif" id="cat" class="vibe-button">vibe button</span>
        <div id="vibe-zone"></div>
      </div>
      `;
@@ -34,7 +36,7 @@ describe("When vibeListener is called it", () => {
     spanEl.click();
 
     const imgEl = document.getElementsByTagName("img")[0];
-    expect(imgEl.src).toBe("http://localhost/assets/vibes/vibing-cat.gif");
+    expect(imgEl.src).toBe("http://localhost/cat.gif");
   });
 
   test("adds img tag with class 'vibe'", () => {
