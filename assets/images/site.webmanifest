@@ -1,0 +1,19 @@
+{
+  "name": "GabeBenjamin.com",
+  "short_name": "GB",
+  "icons": [
+    {
+      "src": "/assets/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/android-chrome-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#816068",
+  "background_color": "#fff4e3",
+  "display": "standalone"
+}
