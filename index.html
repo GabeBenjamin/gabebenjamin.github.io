@@ -24,15 +24,19 @@
         cannot be true inline elements and therefore cannot wrap like normal text. So instead we
         use spans and have manually added in the functionality to make it accessible. -->
       <p>
-        I’m a Senior Software Engineer who enjoys <span is="span-button" class="vibe-button"> fostering inclusive
-          teams</span>, <span is="span-button" class="vibe-button">building robust codebases</span>, and <span
-          is="span-button" class="vibe-button">tackling hard technical challenges</span>.
+        I’m a Senior Software Engineer who enjoys <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/power-rangers.gif"> fostering inclusive teams</span>, <span is="span-button"
+          class="vibe-button" data-vibe-src="/assets/vibes/typing-cat.gif">building robust codebases</span>, and <span
+          is="span-button" class="vibe-button" data-vibe-src="/assets/vibes/thinking-spiderman.gif">tackling hard
+          technical challenges</span>.
       </p>
       <p>
-        Outside of work (but sometimes at work as well 🙂) I like to <span is="span-button"
-          class="vibe-button">cook</span>, <span is="span-button" class="vibe-button">bake</span>, <span
-          is="span-button" class="vibe-button">play video games with friends</span>, and <span is="span-button"
-          class="vibe-button">vibe with my cat Smokey</span>.
+        Outside of work (but sometimes at work as well 🙂) I like to <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/salt-bae.gif">cook</span>, <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/baking-pusheen.gif">bake</span>, <span is="span-button" class="vibe-button"
+          data-vibe-src="/assets/vibes/dancing-mario-bros.gif">play video games with friends</span>, and <span
+          is="span-button" class="vibe-button" data-vibe-src="/assets/vibes/vibing-cat.gif">vibe with my cat
+          Smokey</span>.
       </p>
     </div>
     <hr>
@@ -46,6 +50,8 @@
   <div class="background bottom-wave-container no-shrink">
     <img class="bottom-wave" role="presentation" src="assets/svg/bottom-wave.svg" />
   </div>
+  <div id="vibe-zone"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script type="module" src="assets/js/app.js"></script>
 </body>
 

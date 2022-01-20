@@ -19,5 +19,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.7",
     "jest": "^27.4.7"
-  }
+  },
+  "dependencies": {},
+  "private": true
 }
