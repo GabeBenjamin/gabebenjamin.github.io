@@ -1,5 +1,7 @@
 const pxPerSecond = 200;
 const minimumTime = 2;
+const vibeCountThreshold = 25;
+let numVibes = 0;
 
 /**
  * Animate the vibe element using GreenSock
@@ -45,6 +47,31 @@ function animateVibe(vibeEl) {
 }
 
 /**
+ * Updates the vibe counter based on the number of vibes clicked
+ *
+ * Shows only if we've reached the vibeCountThreshold
+ */
+function updateVibeCount() {
+  if (numVibes < vibeCountThreshold) {
+    return;
+  }
+
+  const vibeCounterEl = document.getElementById("vibe-count");
+  vibeCounterEl.innerText = `${numVibes} vibes`;
+
+  if (numVibes == vibeCountThreshold) {
+    vibeCounterEl.style.display = "block";
+    const timeline = window.gsap.timeline();
+    timeline.from(vibeCounterEl, {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      ease: "ease.in",
+    });
+  }
+}
+
+/**
  * Create the associate vibe element and add it to the DOM
  *
  * @param {Element} target
@@ -69,6 +96,10 @@ function vibeClicked(target) {
 
   // Animate the vibe
   animateVibe(gifEl);
+
+  // Update vibe count
+  numVibes += 1;
+  updateVibeCount();
 }
 
 /**
