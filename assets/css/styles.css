@@ -64,6 +64,40 @@ p {
   margin: 0 0 40px;
 }
 
+@keyframes handwave {
+    from {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+.handwave {
+  display: inline-block;
+  transform-origin: 75% 75%;
+  animation-timing-function: linear;
+}
+
+.handwave:hover {
+  animation-duration: 0.5s;
+  animation-name: handwave;
+  animation-iteration-count: infinite;
+}
+
 .vibe-button {
   cursor: pointer;
   padding: 2px;
