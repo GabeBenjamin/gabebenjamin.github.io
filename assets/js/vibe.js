@@ -72,6 +72,17 @@ function updateVibeCount() {
 }
 
 /**
+ * Track the vibe click as an event in Google Analytics mostly for fun :)
+ */
+function trackVibeClick(target) {
+  gtag("event", "click", {
+    event_category: "Vibe",
+    event_label: target.dataset.vibeName,
+    value: numVibes,
+  });
+}
+
+/**
  * Create the associate vibe element and add it to the DOM
  *
  * @param {Element} target
@@ -100,6 +111,9 @@ function vibeClicked(target) {
   // Update vibe count
   numVibes += 1;
   updateVibeCount();
+
+  // Track vibe click
+  trackVibeClick(target);
 }
 
 /**

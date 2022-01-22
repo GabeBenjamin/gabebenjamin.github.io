@@ -4,15 +4,24 @@
 import { expect, jest } from "@jest/globals";
 import addVibeListeners from "../vibe.js";
 
+let gtagStub;
+
 describe("When vibeListener is called it", () => {
   beforeEach(() => {
     window.gsap = {
       timeline: () => ({ fromTo: jest.fn(), to: jest.fn(), call: jest.fn() }),
     };
 
+    gtagStub = jest.fn();
+    window.gtag = gtagStub;
+
     document.body.innerHTML = `
      <div>
-       <span is="span-button" data-vibe-src="/cat.gif" id="cat" class="vibe-button">vibe button</span>
+       <span
+         is="span-button"
+         data-vibe-src="/cat.gif"
+         id="cat" data-vibe-name="cat"
+         class="vibe-button">vibe button</span>
        <div id="vibe-zone"></div>
      </div>
      `;
@@ -57,5 +66,14 @@ describe("When vibeListener is called it", () => {
 
     const imgEl = document.getElementsByTagName("img")[0];
     expect(imgEl.getAttribute("role")).toBe("presentation");
+  });
+
+  test("tracks vibe click", () => {
+    addVibeListeners(document.querySelectorAll("span.vibe-button"));
+
+    const spanEl = document.getElementById("cat");
+    spanEl.click();
+
+    expect(gtagStub).toBeCalled();
   });
 });
