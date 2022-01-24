@@ -132,7 +132,7 @@ nav a:focus-visible {
 #vibe-zone {
   height: 100%;
   left: 0;
-  overflow-y: hidden;
+  overflow: hidden;
   pointer-events: none;
   position: fixed;
   top: 0;
